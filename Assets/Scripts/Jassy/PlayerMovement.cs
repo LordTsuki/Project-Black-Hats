@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !status.isWallJumping)
+        if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !status.isWallJumping && !status.dashing)
         {
             status.movement = -1;
             status.left = true;
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, 180, 0);
             }
         }
-        else if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A) && !status.isWallJumping)
+        else if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A) && !status.isWallJumping && !status.dashing)
         {
             status.movement = 1;
             status.left = false;
