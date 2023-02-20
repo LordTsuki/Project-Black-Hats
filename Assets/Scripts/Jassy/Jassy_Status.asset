@@ -35,18 +35,20 @@ MonoBehaviour:
   - {x: -0.4, y: -1.95, z: 0}
   - {x: -0.12, y: -0.21, z: 0}
   - {x: 0.12, y: -0.21, z: 0}
+  lastCheck: {x: 3.92, y: -3.02}
   anim: {fileID: 9100000, guid: a1b480e837e846742845789d7f5a9a18, type: 2}
   _cam: {fileID: 0}
   dashingPower: 60
   dashingTime: 0.4
   dashingCooldown: 0.5
-  right: 0
-  left: 1
+  right: 1
+  left: 0
   isGrounded: 1
   isSliding: 0
   controller: 1
   dashing: 0
   canDash: 1
+  isIvulnerable: 0
   weapon: 0
   doubleJump: 0
   leftWallCheck: 0
@@ -68,4 +70,4 @@ MonoBehaviour:
   particleDestroyCooldown: 0.2
   particleDestroy: 0.2
   shootCooldown: 2
-  shootActuallyCooldown: -0.006998461
+  shootActuallyCooldown: -0.0017524629
