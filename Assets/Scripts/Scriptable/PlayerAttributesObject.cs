@@ -24,6 +24,9 @@ public class PlayerAttributesObject : ScriptableObject
     public LayerMask jumpLayerCollider;
     public Vector3[] footOffset;
 
+    [Header("Respawn")]
+    public Vector2 lastCheck;
+
     [Header("Components")]
     public RuntimeAnimatorController anim;
     public GameObject _cam;
