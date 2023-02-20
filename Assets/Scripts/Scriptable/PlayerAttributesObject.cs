@@ -41,6 +41,7 @@ public class PlayerAttributesObject : ScriptableObject
     public bool controller;
     public bool dashing;
     public bool canDash;
+    public bool isIvulnerable;
     public int weapon;
     public bool doubleJump;
     public bool leftWallCheck;

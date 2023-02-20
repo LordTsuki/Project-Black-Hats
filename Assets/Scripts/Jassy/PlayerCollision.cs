@@ -13,6 +13,18 @@ public class PlayerCollision : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        if (status.isIvulnerable)
+        {
+            Physics2D.IgnoreLayerCollision(8, 9, true);
+        }
+        else
+        {
+            Physics2D.IgnoreLayerCollision(8, 9, false);
+        }
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         //if(collision.gameObject.layer == 3)
