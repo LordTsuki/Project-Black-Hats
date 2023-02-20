@@ -6,14 +6,12 @@ public class Health_Minor : MonoBehaviour
 {
     public PlayerAttributesObject status;
     public ItemsAttributesObject item;
-    public Collider2D col;
 
     void Start()
     {
-        col = GetComponent<Collider2D>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
