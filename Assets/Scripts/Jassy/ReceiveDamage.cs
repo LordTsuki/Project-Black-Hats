@@ -21,8 +21,11 @@ public class ReceiveDamage : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        status.health -= damage;
-        anim.SetTrigger("hit");
+        if(!status.isIvulnerable)
+        {
+            status.health -= damage;
+            anim.SetTrigger("hit");
+        }
 
         if (status.health <= 0)
         {

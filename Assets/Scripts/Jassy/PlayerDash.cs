@@ -40,6 +40,7 @@ public class PlayerDash : MonoBehaviour
         {
             status.canDash = false;
             status.dashing = true;
+            status.isIvulnerable = true;
             float originalGravity = rig.gravityScale;
             rig.gravityScale = 0f;
             if (status.right && !status.left)
@@ -55,6 +56,7 @@ public class PlayerDash : MonoBehaviour
             yield return new WaitForSeconds(status.dashingTime);
             rig.gravityScale = originalGravity;
             status.dashing = false;
+            status.isIvulnerable = false;
             yield return new WaitForSeconds(status.dashingCooldown);
             status.canDash = true;
         }
