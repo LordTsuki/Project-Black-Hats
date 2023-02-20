@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da7daa2ffb409f40b4d3cf3048158b9, type: 3}
   m_Name: Health Minor
   m_EditorClassIdentifier: 
-  heal: 0
+  heal: 25
