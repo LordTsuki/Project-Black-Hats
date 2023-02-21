@@ -8,6 +8,7 @@ public class EnemyReceiveDamage : MonoBehaviour
     public EnemyAttributesObject status;
     void Start()
     {
+        status.health = status.maxHealth;
         anim = GetComponent<Animator>();
     }
     public void TakeDamage(float damage)

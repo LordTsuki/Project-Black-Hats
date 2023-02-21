@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
+using static UnityEngine.UI.Image;
+using UnityEngine.UIElements;
 
 public class CannonShot : MonoBehaviour
 {
@@ -24,6 +28,7 @@ public class CannonShot : MonoBehaviour
             DestroyProjectile();
         }
         transform.Translate(Vector2.up * status.shootSpeed * Time.deltaTime);
+        Debug.DrawRay(transform.position, transform.up * status.shootRayDistance);
     }
 
     void DestroyProjectile()
