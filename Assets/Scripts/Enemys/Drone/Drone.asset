@@ -33,6 +33,6 @@ MonoBehaviour:
   attackTime: 0
   meeleDamage: 0
   attackCooldown: 0
-  shootCooldown: 0.1391535
+  shootCooldown: 0.042848557
   startShootCooldown: 0.5
-  returnSpeed: 40
+  returnSpeed: 0

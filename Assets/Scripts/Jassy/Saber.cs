@@ -96,15 +96,10 @@ public class Saber : MonoBehaviour
             damageable.TakeDamage(status.meeleDamage);
         }
 
-        var deflectable = collision.GetComponent<IDeflectable>();
+        /*var deflectable = collision.GetComponent<IDeflectable>();
         if(deflectable != null)
         {
             deflectable.Deflect(transform.right);
-            var droneShoot = collision.GetComponent<DroneShoot>();
-            if (droneShoot != null)
-            {
-                droneShoot.ReflectProjectile(transform.position);
-            }
-        }
+        }*/
     }
 }
