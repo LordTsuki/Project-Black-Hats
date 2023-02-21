@@ -52,11 +52,16 @@ public class DroneShoot : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void ReflectProjectile(Vector2 reflectionPoint)
     {
-        if (collision.CompareTag("Saber"))
-        {
-            rig.velocity = Vector2.Reflect(rig.velocity, collision.transform.position) * reflectionForce;
-        }
+        // Calculate the reflection vector
+        Vector2 reflectionDir = reflectionPoint - rig.position;
+        reflectionDir = -reflectionDir.normalized;
+
+        // Reflect the projectile in the opposite direction
+        rig.velocity = reflectionDir * reflectionForce;
+
+        // Rotate the projectile to face the reflection direction
+        transform.up = reflectionDir;
     }
 }
