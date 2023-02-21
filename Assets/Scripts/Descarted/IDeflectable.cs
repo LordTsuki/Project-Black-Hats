@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering.Universal;
 using UnityEngine;
 
 public class IDeflectable : MonoBehaviour
@@ -15,10 +16,8 @@ public class IDeflectable : MonoBehaviour
     }
     public void Deflect(Vector2 direction)
     {
-        if (direction.x > 0 && transform.right.x < 0 || (direction.x < 0 && transform.right.x > 0))
         {
-            transform.right = -transform.right;
+            rig.velocity = -direction * status.returnSpeed;
         }
-        rig.velocity = transform.right * status.returnSpeed;
     }
 }
