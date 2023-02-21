@@ -108,7 +108,7 @@ MonoBehaviour:
   whatisSolid:
     serializedVersion: 2
     m_Bits: 8456
-  reflectionForce: 300
+  reflectionForce: 20
   destroyEffect: {fileID: 5413760729298045191, guid: 3d3b385b6d8b5be47a436fb37a3ce111, type: 3}
   aimPos: {x: -7, y: 0}
   groundHitParticle: {fileID: 5413760729298045191, guid: 3d3b385b6d8b5be47a436fb37a3ce111, type: 3}
@@ -182,5 +182,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  rig: {fileID: 0}
+  rig: {fileID: 3384037119591225235}
   status: {fileID: 11400000, guid: 9601af3f7eee15449906bb3c9d730476, type: 2}
