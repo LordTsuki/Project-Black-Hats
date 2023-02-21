@@ -58,6 +58,7 @@ public class PlayerAttributesObject : ScriptableObject
     public float firstHit;
     public float secondHit;
     public float thirdHit;
+    public float reflectionForce;
 
     [Header("Cannon")]
     public float shootSpeed;

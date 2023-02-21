@@ -14,7 +14,7 @@ public class DroneShoot : MonoBehaviour
     public float distance;
     public float damage;
     public LayerMask whatisSolid;
-    public float reflectionForce = 10f;
+    public float reflectionForce = 3000f;
 
     [Header("Components")]
     public GameObject destroyEffect;
@@ -36,10 +36,12 @@ public class DroneShoot : MonoBehaviour
                 hitInfo.collider.GetComponent<ReceiveDamage>().TakeDamage(damage);
                 DestroyProjectile();
             }
-            //if (hitInfo.collider.CompareTag("Saber"))
-            //{
-            //    lifeTime = 0.5f;
-            //}
+            else if (hitInfo.collider.CompareTag("Saber"))
+            {
+                //Vector2 reflectDirection = -hitInfo.collider.transform.right;
+                //rig.AddForce(reflectDirection * reflectionForce, ForceMode2D.Impulse);
+                lifeTime = 0.5f;
+            }
         }
         transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
@@ -48,5 +50,13 @@ public class DroneShoot : MonoBehaviour
     {
         Instantiate(destroyEffect, transform.position, transform.rotation);
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Saber"))
+        {
+            rig.velocity = Vector2.Reflect(rig.velocity, collision.transform.position) * reflectionForce;
+        }
     }
 }
