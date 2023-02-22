@@ -6,6 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/Scenes/Laboratorio_da_Quelinna.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+=======
+    path: Assets/Scenes/Main.unity
+    guid: dfa68ec4be267f6459224c43128025de
+  - enabled: 1
+    path: Assets/Scenes/Projeto Metroidvania Adrenalina.unity
+    guid: aa3489300209fd84dbd50510f1491a01
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: ed6cae68c8337fd47b0209bce0b6f5c6
+>>>>>>> Stashed changes
   m_configObjects: {}
