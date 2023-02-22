@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -14,7 +15,7 @@ public class DroneShoot : MonoBehaviour
     public float distance;
     public float damage;
     public LayerMask whatisSolid;
-    public float reflectionForce = 3000f;
+    public float reflectionForce;
 
     [Header("Components")]
     public GameObject destroyEffect;
@@ -28,7 +29,7 @@ public class DroneShoot : MonoBehaviour
     }
     void Update()
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatisSolid);
+        /*RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance, whatisSolid);
         if (hitInfo.collider != null)
         {
             if (hitInfo.collider.CompareTag("Player"))
@@ -38,11 +39,18 @@ public class DroneShoot : MonoBehaviour
             }
             else if (hitInfo.collider.CompareTag("Saber"))
             {
-                //Vector2 reflectDirection = -hitInfo.collider.transform.right;
-                //rig.AddForce(reflectDirection * reflectionForce, ForceMode2D.Impulse);
                 lifeTime = 0.5f;
+                if (hitInfo.collider.CompareTag("Enemy"))
+                {
+                    hitInfo.collider.GetComponent<EnemyReceiveDamage>().TakeDamage(damage);
+                    DestroyProjectile();
+                }
             }
-        }
+            else if (hitInfo.collider.IsTouchingLayers(3))
+            {
+                DestroyProjectile();
+            }
+        }*/
         transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
 
@@ -63,5 +71,30 @@ public class DroneShoot : MonoBehaviour
 
         // Rotate the projectile to face the reflection direction
         transform.up = reflectionDir;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision != null)
+        {
+            if (collision.CompareTag("Player"))
+            {
+                collision.GetComponent<ReceiveDamage>().TakeDamage(damage);
+                DestroyProjectile();
+            }
+            else if (collision.CompareTag("Saber"))
+            {
+                lifeTime = 0.5f;
+                if (collision.CompareTag("Enemy"))
+                {
+                    collision.GetComponent<EnemyReceiveDamage>().TakeDamage(damage);
+                    DestroyProjectile();
+                }
+            }
+            else if (collision.IsTouchingLayers(3))
+            {
+                DestroyProjectile();
+            }
+        }
     }
 }
