@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Jassy_Status
   m_EditorClassIdentifier: 
   maxHealth: 100
-  health: 100
+  health: 60
   speed: 10
   movement: 0
-  jumpForce: 15
-  doubleJumpForce: 15
+  jumpForce: 20
+  doubleJumpForce: 20
   groundDistance: 0.4
   wallJumpForce: 15
   wallCheckDistance: 0.4
@@ -41,8 +41,8 @@ MonoBehaviour:
   dashingPower: 60
   dashingTime: 0.4
   dashingCooldown: 0.5
-  right: 1
-  left: 0
+  right: 0
+  left: 1
   isGrounded: 1
   isSliding: 0
   controller: 1
@@ -50,16 +50,17 @@ MonoBehaviour:
   canDash: 1
   isIvulnerable: 0
   weapon: 0
-  doubleJump: 0
+  doubleJump: 1
   leftWallCheck: 0
   rightWallCheck: 0
   isWallJumping: 0
-  attackTime: 0.3
+  attackTime: 3
   meeleDamage: 25
   attackCooldown: 1
-  firstHit: -0.00027538533
-  secondHit: -0.0016607195
-  thirdHit: -0.0016607195
+  firstHit: 0.5304085
+  secondHit: -0.035225794
+  thirdHit: -0.005613301
+  reflectionForce: 300
   shootSpeed: 20
   shootLifeTime: 0.5
   shootRayDistance: 0.1
@@ -70,4 +71,4 @@ MonoBehaviour:
   particleDestroyCooldown: 0.2
   particleDestroy: 0.2
   shootCooldown: 2
-  shootActuallyCooldown: -0.0009507033
+  shootActuallyCooldown: -0.023670707
