@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jassy_Status
   m_EditorClassIdentifier: 
   maxHealth: 100
-  health: 60
+  health: 100
   speed: 10
   movement: 0
   jumpForce: 20
@@ -22,7 +22,7 @@ MonoBehaviour:
   wallJumpForce: 15
   wallCheckDistance: 0.4
   jumpDiagonalFactor: 1
-  wallJumpTime: -0.0008080278
+  wallJumpTime: -0.0005888054
   wallJumpCooldown: 0.2
   wallLayerCollider:
     serializedVersion: 2
@@ -35,7 +35,7 @@ MonoBehaviour:
   - {x: -0.4, y: -1.95, z: 0}
   - {x: -0.12, y: -0.21, z: 0}
   - {x: 0.12, y: -0.21, z: 0}
-  lastCheck: {x: 3.92, y: -3.02}
+  lastCheck: {x: 165.36, y: -3.26}
   anim: {fileID: 9100000, guid: a1b480e837e846742845789d7f5a9a18, type: 2}
   _cam: {fileID: 0}
   dashingPower: 60
@@ -50,16 +50,16 @@ MonoBehaviour:
   canDash: 1
   isIvulnerable: 0
   weapon: 0
-  doubleJump: 1
+  doubleJump: 0
   leftWallCheck: 0
   rightWallCheck: 0
   isWallJumping: 0
-  attackTime: 3
+  attackTime: 0.3
   meeleDamage: 25
   attackCooldown: 1
-  firstHit: 0.5304085
-  secondHit: -0.035225794
-  thirdHit: -0.005613301
+  firstHit: -0.0008463992
+  secondHit: -0.0008463992
+  thirdHit: -0.0008463992
   reflectionForce: 300
   shootSpeed: 20
   shootLifeTime: 0.5
@@ -71,4 +71,4 @@ MonoBehaviour:
   particleDestroyCooldown: 0.2
   particleDestroy: 0.2
   shootCooldown: 2
-  shootActuallyCooldown: -0.023670707
+  shootActuallyCooldown: -0.00015747966

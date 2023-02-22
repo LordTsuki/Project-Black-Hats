@@ -107,7 +107,7 @@ MonoBehaviour:
   damage: 5
   whatisSolid:
     serializedVersion: 2
-    m_Bits: 8456
+    m_Bits: 9032
   reflectionForce: 20
   destroyEffect: {fileID: 5413760729298045191, guid: 3d3b385b6d8b5be47a436fb37a3ce111, type: 3}
   aimPos: {x: -7, y: 0}
@@ -163,7 +163,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.038559947, y: 5.071865}
