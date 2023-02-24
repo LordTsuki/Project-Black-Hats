@@ -9,6 +9,9 @@ public class Saber : MonoBehaviour
     public Rigidbody2D rig;
     public CircleCollider2D trig;
     public PlayerAttributesObject status;
+
+    private 
+
     void Start()
     {
         anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
@@ -63,7 +66,7 @@ public class Saber : MonoBehaviour
     public void SecondAttack()
     {
         trig.enabled = true;
-        //anim 2
+        anim.SetTrigger("attack2");
         StartCoroutine(PerformSecondAttack());
     }
     private IEnumerator PerformSecondAttack()
@@ -76,7 +79,7 @@ public class Saber : MonoBehaviour
     public void ThirdAttack()
     {
         trig.enabled = true;
-        //anim 3
+        anim.SetTrigger("attack3");
         StartCoroutine(PerformThirdAttack());
     }
     private IEnumerator PerformThirdAttack()
