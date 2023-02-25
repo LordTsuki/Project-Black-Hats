@@ -93,34 +93,21 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
-    
     public void Play()
     {
-        SceneManager.LoadScene(3);
-        LoadScenePlay();
-    }
-   
-
-    private void LoadScenePlay()
-    {
-        // Mostra a tela de carregamento
         SceneManager.LoadSceneAsync(1);
-        /*AsyncOperation asyncLoad =*/
-        /*asyncLoad.allowSceneActivation = false;
+    }
 
-        while (!asyncLoad.isDone)
-        {
-     
+    private void LoadScenes()
+    {
+        // Carrega a tela de loading
+        SceneManager.LoadScene(3);
 
-            // Verifica se a cena está totalmente carregada
-            if (asyncLoad.progress >= 0.9f)
-            {
-                // Aguarda um breve período antes de ativar a cena
-                yield return new WaitForSeconds(2);
-                asyncLoad.allowSceneActivation = true;
-            }
+        // Carrega a cena do jogo
+        SceneManager.LoadSceneAsync(1);
 
-            yield return null;
-        }*/
+        // A cena 1 foi carregada, oculta a tela de loading
+        // e inicia o jogo
+        // ... seu código aqui ...
     }
 }
