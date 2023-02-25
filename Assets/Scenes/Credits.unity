@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 128369109}
   - component: {fileID: 128369111}
   - component: {fileID: 128369110}
+  - component: {fileID: 128369112}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -158,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0025024414, y: 0.5}
+  m_AnchoredPosition: {x: 0.0025634766, y: 0.5}
   m_SizeDelta: {x: 0, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &128369110
@@ -181,7 +182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2cabc359364b98246b4cb0b106013623, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6fe0632d90925b045852822937484c56, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -199,6 +200,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128369108}
   m_CullTransparentMesh: 1
+--- !u!95 &128369112
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128369108}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 971a2848079c7334591253b7fea256ed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &365832754
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,8 +425,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.4299927, y: 8.619995}
-  m_SizeDelta: {x: -47.31, y: -65.08}
+  m_AnchoredPosition: {x: 0, y: 10}
+  m_SizeDelta: {x: -44.8, y: -61.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1180373863
 MonoBehaviour:
@@ -429,7 +450,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 79145a19cdf195840ba83b6ca0195f72, type: 3}
-    m_FontSize: 18
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -440,9 +461,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Equipe de Produ\xE7\xE3o:\n\nArte:\nNik\n\nAnima\xE7\xE3o:\nNik\nMoldaw\nExtemporanio\n\nSonoplastia:\nMoldaw\n\nPrograma\xE7\xE3o:\nLord\nKimentar\n\nUI/UX:\nLucas
-    Apparecido - Kimentar\nNik\n\nLevel Design:\nnIK\n\nGame Design:\nLucas Apparecido
-    - Kimentar\n\n"
+  m_Text: "Equipe de Produ\xE7\xE3o:\n\nArte:\nNikolas Hoffling - Nik\n\nAnima\xE7\xE3o:\nNikolas
+    Hoffling - Nik\nC\xEDcero Rom\xE3o - Extemporanio\n\nSonoplastia:\nRaquel Mello
+    - Moldaw\n\nPrograma\xE7\xE3o:\nGabriel de Carvalho - Lord\nLucas Apparecido
+    - Kimentar\n\nUI/UX:\nLucas Apparecido - Kimentar\nNikolas Hoffling - Nik\n\nLevel
+    Design:\nNikolas Hoffling - Nik\n\nGame Design:\nLucas Apparecido - Kimentar\n\n"
 --- !u!222 &1180373864
 CanvasRenderer:
   m_ObjectHideFlags: 0
