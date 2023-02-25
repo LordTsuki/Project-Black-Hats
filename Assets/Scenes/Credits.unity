@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 128369110}
   - component: {fileID: 128369112}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,7 +210,7 @@ Animator:
   m_GameObject: {fileID: 128369108}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 971a2848079c7334591253b7fea256ed, type: 2}
+  m_Controller: {fileID: 9100000, guid: 414a0f908d61251408f907f64310a8ad, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
