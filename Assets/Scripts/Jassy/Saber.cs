@@ -10,7 +10,12 @@ public class Saber : MonoBehaviour
     public CircleCollider2D trig;
     public PlayerAttributesObject status;
 
-    private 
+    private float timeCooldownAttack1 = 0.5f;
+    //private float countCooldownAttack1;
+    private float timeCooldownAttack2 = 0.5f;
+    //private float countCooldownAttack2;
+   // private float timeCooldownAttack3 = 1f;
+   // private float countCooldownAttack3;
 
     void Start()
     {
@@ -37,11 +42,11 @@ public class Saber : MonoBehaviour
         {
             FirstAttack();
         }
-        if (Input.GetKeyDown(KeyCode.K) && status.firstHit > 0 && status.secondHit <= 0)
+        if ((Input.GetKeyDown(KeyCode.K) && status.firstHit > 0 && status.secondHit <= 0) && ((timeCooldownAttack1 -= Time.deltaTime) == 0))
         {
             SecondAttack();
         }
-        if (Input.GetKeyDown(KeyCode.K) && status.secondHit > 0 && status.thirdHit <= 0)
+        if ((Input.GetKeyDown(KeyCode.K) && status.secondHit > 0 && status.thirdHit <= 0) && ((timeCooldownAttack2 -= Time.deltaTime) == 0))
         {
             ThirdAttack();
         }
@@ -66,7 +71,7 @@ public class Saber : MonoBehaviour
     public void SecondAttack()
     {
         trig.enabled = true;
-        anim.SetTrigger("attack2");
+        anim.SetTrigger("attack1");
         StartCoroutine(PerformSecondAttack());
     }
     private IEnumerator PerformSecondAttack()
