@@ -95,19 +95,7 @@ public class MenuController : MonoBehaviour
 
     public void Play()
     {
+        SceneManager.LoadSceneAsync(3);
         SceneManager.LoadSceneAsync(1);
-    }
-
-    private void LoadScenes()
-    {
-        // Carrega a tela de loading
-        SceneManager.LoadScene(3);
-
-        // Carrega a cena do jogo
-        SceneManager.LoadSceneAsync(1);
-
-        // A cena 1 foi carregada, oculta a tela de loading
-        // e inicia o jogo
-        // ... seu código aqui ...
     }
 }
