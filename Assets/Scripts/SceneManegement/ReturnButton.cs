@@ -18,6 +18,7 @@ public class ReturnButton : MonoBehaviour
 
      public void Return()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(0);
     }
 }
