@@ -41,7 +41,7 @@ public class Saber : MonoBehaviour
         {
             SecondAttack();
         }
-        if (Input.GetKeyDown(KeyCode.K) && status.secondHit > 0 && status.thirdHit <= 0)
+        if (Input.GetKeyDown(KeyCode.K) && status.firstHit > 0 && status.secondHit > 0 && status.thirdHit <= 0)
         {
             ThirdAttack();
         }
@@ -59,7 +59,7 @@ public class Saber : MonoBehaviour
     }
     private IEnumerator PerformFirstAttack()
     {
-        yield return new WaitForSeconds(status.attackTime);
+        yield return new WaitForSeconds(0.5f);
         trig.enabled = false;
         status.firstHit = status.attackCooldown;
     }
@@ -71,7 +71,7 @@ public class Saber : MonoBehaviour
     }
     private IEnumerator PerformSecondAttack()
     {
-        yield return new WaitForSeconds(status.attackTime);
+        yield return new WaitForSeconds(0.5f);
         trig.enabled = false;
         status.firstHit = status.attackCooldown;
         status.secondHit = status.attackCooldown;
@@ -84,7 +84,7 @@ public class Saber : MonoBehaviour
     }
     private IEnumerator PerformThirdAttack()
     {
-        yield return new WaitForSeconds(status.attackTime);
+        yield return new WaitForSeconds(1f);
         trig.enabled = false;
         status.firstHit = status.attackCooldown;
         status.secondHit = status.attackCooldown;
