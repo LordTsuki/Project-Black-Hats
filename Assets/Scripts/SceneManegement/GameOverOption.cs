@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MenuOption : MonoBehaviour
+public class GameOverOption : MonoBehaviour
 {
     public Text optionText;
 
-    private Color selectedColor = new Color(13f / 255f, 245f / 255f, 146f / 255f);
-    private Color deselectedColor = new Color(150f / 255f, 243f / 255f, 232f / 255f);
+    private Color selectedColor = new Color(251f / 255f, 189f / 255f, 160f / 255f);
+    private Color deselectedColor = new Color(255f / 255f, 213f / 255f, 213f / 255f);
 
     public void SelectOption()
     {
@@ -19,5 +19,6 @@ public class MenuOption : MonoBehaviour
     {
         optionText.color = deselectedColor;
     }
+
 
 }

@@ -245,7 +245,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: decfec61ec3bc104ab21694953c2b706, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -524,6 +524,7 @@ GameObject:
   - component: {fileID: 670932500}
   - component: {fileID: 670932499}
   - component: {fileID: 670932498}
+  - component: {fileID: 670932501}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -545,7 +546,7 @@ RectTransform:
   m_Children:
   - {fileID: 25409260}
   m_Father: {fileID: 2038243274}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -595,7 +596,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 670932499}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1971883315}
+        m_TargetAssemblyTypeName: GameOverController, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &670932499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,6 +647,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670932496}
   m_CullTransparentMesh: 1
+--- !u!114 &670932501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670932496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569acec4939619d49a92a3c0b5e80be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionText: {fileID: 25409261}
 --- !u!1 &1253093502
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +672,7 @@ GameObject:
   - component: {fileID: 1253093506}
   - component: {fileID: 1253093505}
   - component: {fileID: 1253093504}
+  - component: {fileID: 1253093507}
   m_Layer: 5
   m_Name: ReturnButton
   m_TagString: Untagged
@@ -667,7 +694,7 @@ RectTransform:
   m_Children:
   - {fileID: 1528956916}
   m_Father: {fileID: 2038243274}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.41985187, y: 0.079646096}
   m_AnchorMax: {x: 0.60400003, y: 0.13100001}
@@ -717,7 +744,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1253093505}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1971883315}
+        m_TargetAssemblyTypeName: GameOverController, Assembly-CSharp
+        m_MethodName: Return
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1253093505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,6 +795,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253093502}
   m_CullTransparentMesh: 1
+--- !u!114 &1253093507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253093502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569acec4939619d49a92a3c0b5e80be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionText: {fileID: 1528956917}
 --- !u!1 &1260215002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,7 +1236,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 244c9620bf55a0d41942bcb33fd6823a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1270,6 +1322,56 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1971883314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1971883316}
+  - component: {fileID: 1971883315}
+  m_Layer: 0
+  m_Name: GameOverController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1971883315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971883314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1cb6f104251def42be4ab2d53b919ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourceClick: {fileID: 1845979743}
+  audioSourceSelected: {fileID: 412971265}
+  options:
+  - {fileID: 670932496}
+  - {fileID: 1253093502}
+  arrow: {fileID: 1452831533}
+--- !u!4 &1971883316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971883314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2024.7401, y: 1192.227, z: 802.4283}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2038243270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,8 +1466,8 @@ RectTransform:
   m_Children:
   - {fileID: 501119729}
   - {fileID: 1452831534}
-  - {fileID: 1253093503}
   - {fileID: 670932497}
+  - {fileID: 1253093503}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
