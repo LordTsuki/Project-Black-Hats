@@ -8,9 +8,8 @@ public class Saber : MonoBehaviour
     public Animator anim;
     public Rigidbody2D rig;
     public CircleCollider2D trig;
+    //public AudioSource audioAttack;
     public PlayerAttributesObject status;
-
-    private 
 
     void Start()
     {
@@ -20,75 +19,88 @@ public class Saber : MonoBehaviour
     }
     private void Update()
     {
-        if (status.firstHit > 0)
+        if (Input.GetKeyDown(KeyCode.K) && !status.attacking && !status.firstHit && !status.secondHit && !status.thirdHit)
         {
-            status.firstHit -= Time.deltaTime;
-        }
-        if (status.secondHit > 0)
-        {
-            status.secondHit -= Time.deltaTime;
-        }
-        if (status.thirdHit > 0)
-        {
-            status.thirdHit -= Time.deltaTime;
-        }
-
-        if (Input.GetKeyDown(KeyCode.K) && status.firstHit <= 0)
-        {
+            status.attacking = true;
             FirstAttack();
+            status.cooldown = status.attackCooldown;
         }
-        if (Input.GetKeyDown(KeyCode.K) && status.firstHit > 0 && status.secondHit <= 0)
+        else if (Input.GetKeyDown(KeyCode.K) && !status.attacking && status.firstHit && !status.secondHit && !status.thirdHit)
         {
+            status.attacking = true;
             SecondAttack();
         }
-        if (Input.GetKeyDown(KeyCode.K) && status.firstHit > 0 && status.secondHit > 0 && status.thirdHit <= 0)
+        else if (Input.GetKeyDown(KeyCode.K) && !status.attacking && status.firstHit && status.secondHit && !status.thirdHit)
         {
+            status.attacking = true;
             ThirdAttack();
+        }
+        else
+        {
+            if(status.cooldown > 0)
+            {
+                status.cooldown -= Time.deltaTime;
+            }
+            if (status.cooldown <= 0)
+            {
+                status.firstHit = false;
+                status.secondHit = false;
+                status.thirdHit = false;
+            }
         }
     }
     private void Awake()
     {
         trig.enabled = false;
+        status.attacking = false;
+        status.firstHit = false;
+        status.secondHit = false;
+        status.thirdHit = false;
     }
 
     public void FirstAttack()
     {
-        trig.enabled = true;
-        anim.SetTrigger("attack1");
+        //audioAttack.Play();
         StartCoroutine(PerformFirstAttack());
     }
     private IEnumerator PerformFirstAttack()
     {
-        yield return new WaitForSeconds(0.5f);
+        status.firstHit = true;
+        status.secondHit = false;
+        status.thirdHit = false;
+        trig.enabled = true;
+        anim.SetTrigger("attack1");
+        yield return new WaitForSeconds(status.firstHitTime);
         trig.enabled = false;
-        status.firstHit = status.attackCooldown;
+        status.attacking = false;
     }
     public void SecondAttack()
     {
-        trig.enabled = true;
-        anim.SetTrigger("attack2");
+        //audioAttack.Play();
         StartCoroutine(PerformSecondAttack());
     }
     private IEnumerator PerformSecondAttack()
     {
-        yield return new WaitForSeconds(0.5f);
+        status.secondHit = true;
+        trig.enabled = true;
+        anim.SetTrigger("attack2");
+        yield return new WaitForSeconds(status.secondHitTime);
         trig.enabled = false;
-        status.firstHit = status.attackCooldown;
-        status.secondHit = status.attackCooldown;
+        status.attacking = false;
     }
     public void ThirdAttack()
     {
-        trig.enabled = true;
-        anim.SetTrigger("attack3");
+        //audioAttack.Play();
         StartCoroutine(PerformThirdAttack());
     }
     private IEnumerator PerformThirdAttack()
     {
-        yield return new WaitForSeconds(1f);
+        status.thirdHit = true;
+        trig.enabled = true;
+        anim.SetTrigger("attack3");
+        yield return new WaitForSeconds(status.thirdHitTime);
         trig.enabled = false;
-        status.firstHit = status.attackCooldown;
-        status.secondHit = status.attackCooldown;
-        status.thirdHit = status.attackCooldown;
+        status.attacking = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
