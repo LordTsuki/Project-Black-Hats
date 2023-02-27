@@ -13,10 +13,13 @@ public class Drone : MonoBehaviour
     public EnemyAttributesObject status;
     public Rigidbody2D rig;
 
+    public AudioSource audioDrone;
+
     private void Awake()
     {
         rig = GetComponent<Rigidbody2D>();
         status.health = status.maxHealth;
+        audioDrone.Play();
     }
     void Update()
     {
@@ -49,7 +52,7 @@ public class Drone : MonoBehaviour
         else
         {
             status.spot = false;
-            rig.velocity = new Vector2(status.movement * status.speed, rig.velocity.y);
+           // rig.velocity = new Vector2(status.movement * status.speed, rig.velocity.y);
             if (ground.collider == false && status.movement == 1)
             {
                 transform.eulerAngles = new Vector2(0, 180);
