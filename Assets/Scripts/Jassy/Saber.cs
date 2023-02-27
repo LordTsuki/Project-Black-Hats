@@ -8,6 +8,7 @@ public class Saber : MonoBehaviour
     public Animator anim;
     public Rigidbody2D rig;
     public CircleCollider2D trig;
+    //public AudioSource audioAttack;
     public PlayerAttributesObject status;
 
     void Start()
@@ -58,7 +59,8 @@ public class Saber : MonoBehaviour
     }
 
     public void FirstAttack()
-    {     
+    {
+        //audioAttack.Play();
         StartCoroutine(PerformFirstAttack());
     }
     private IEnumerator PerformFirstAttack()
@@ -74,6 +76,7 @@ public class Saber : MonoBehaviour
     }
     public void SecondAttack()
     {
+        //audioAttack.Play();
         StartCoroutine(PerformSecondAttack());
     }
     private IEnumerator PerformSecondAttack()
@@ -87,6 +90,7 @@ public class Saber : MonoBehaviour
     }
     public void ThirdAttack()
     {
+        //audioAttack.Play();
         StartCoroutine(PerformThirdAttack());
     }
     private IEnumerator PerformThirdAttack()
