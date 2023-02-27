@@ -50,14 +50,19 @@ public class PlayerAttributesObject : ScriptableObject
     public bool leftWallCheck;
     public bool rightWallCheck;
     public bool isWallJumping;
+    public bool attacking;
 
     [Header("Meele Weapon")]
     public float attackTime;
     public float meeleDamage;
     public float attackCooldown;
-    public float firstHit;
-    public float secondHit;
-    public float thirdHit;
+    public float cooldown;
+    public bool firstHit;
+    public float firstHitTime;
+    public bool secondHit;
+    public float secondHitTime;
+    public bool thirdHit;
+    public float thirdHitTime;
     public float reflectionForce;
 
     [Header("Cannon")]

@@ -41,8 +41,8 @@ MonoBehaviour:
   dashingPower: 60
   dashingTime: 0.4
   dashingCooldown: 0.5
-  right: 0
-  left: 1
+  right: 1
+  left: 0
   isGrounded: 1
   isSliding: 0
   controller: 1
@@ -54,12 +54,17 @@ MonoBehaviour:
   leftWallCheck: 0
   rightWallCheck: 0
   isWallJumping: 0
+  attacking: 0
   attackTime: 0.3
   meeleDamage: 25
-  attackCooldown: 1
-  firstHit: -0.0016453126
-  secondHit: -0.0016453126
-  thirdHit: -0.0016453126
+  attackCooldown: 2
+  cooldown: -0.00019355933
+  firstHit: 0
+  firstHitTime: 0.4
+  secondHit: 0
+  secondHitTime: 0.4
+  thirdHit: 0
+  thirdHitTime: 1
   reflectionForce: 300
   shootSpeed: 20
   shootLifeTime: 0.5
@@ -71,4 +76,4 @@ MonoBehaviour:
   particleDestroyCooldown: 0.2
   particleDestroy: 0.2
   shootCooldown: 2
-  shootActuallyCooldown: -0.0016546417
+  shootActuallyCooldown: -0.0014600162
