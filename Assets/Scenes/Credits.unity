@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 479538155}
   - component: {fileID: 479538154}
   m_Layer: 5
-  m_Name: Return_Button
+  m_Name: ReturnButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -538,7 +538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.86566675, y: 0.036353912}
   m_AnchorMax: {x: 1, y: 0.074107006}
-  m_AnchoredPosition: {x: -0.11999512, y: -1.0899658}
+  m_AnchoredPosition: {x: -0.11999512, y: 1.7000122}
   m_SizeDelta: {x: 15, y: 7}
   m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!114 &479538154
@@ -856,10 +856,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Equipe de Produ\xE7\xE3o:\n\nArte:\nNikolas Hoffling - Nik\n\nAnima\xE7\xE3o:\nNikolas
-    Hoffling - Nik\nC\xEDcero Rom\xE3o - Extemporanio\n\nSonoplastia:\nRaquel Mello
-    - Moldaw\n\nPrograma\xE7\xE3o:\nGabriel de Carvalho - Lord\nLucas Apparecido
-    - Kimentar\n\nUI/UX:\nLucas Apparecido - Kimentar\nNikolas Hoffling - Nik\n\nLevel
-    Design:\nNikolas Hoffling - Nik\n\nGame Design:\nLucas Apparecido - Kimentar\n\n"
+    Hoffling - Nik\nC\xEDcero Rom\xE3o - Extemporanio\nraquel Mello - Moldaw\n\nSonoplastia:\nRaquel
+    Mello - Moldaw\n\nPrograma\xE7\xE3o:\nGabriel Luna - Lord\nLucas Apparecido -
+    Kimentar\n\nUI/UX:\nLucas Apparecido - Kimentar\nNikolas Hoffling - Nik\n\nLevel
+    Design:\nNikolas Hoffling - Nik\n\nGame Design:\nGabriel Luna - Lord\n\n"
 --- !u!222 &1180373864
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -901,10 +901,10 @@ RectTransform:
   m_Father: {fileID: 764277655}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.8281482, y: 0}
+  m_AnchorMin: {x: 0.8253705, y: 0}
   m_AnchorMax: {x: 0.8777037, y: 0.09718517}
-  m_AnchoredPosition: {x: 0.33996582, y: -0.060058594}
-  m_SizeDelta: {x: -0.30000305, y: -1.1199989}
+  m_AnchoredPosition: {x: 1.5950317, y: 2.894989}
+  m_SizeDelta: {x: -2.8099995, y: -5.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1686593768
 MonoBehaviour:
