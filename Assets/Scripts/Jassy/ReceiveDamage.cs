@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.SceneManagement;
 
 public class ReceiveDamage : MonoBehaviour
 {
@@ -26,8 +27,8 @@ public class ReceiveDamage : MonoBehaviour
 
         if (status.health <= 0)
         {
-            anim.SetBool("death", true);
-            Destroy(gameObject);
+            //anim.SetBool("death", true);
+            SceneManager.LoadScene(4);
         }
     }
 }

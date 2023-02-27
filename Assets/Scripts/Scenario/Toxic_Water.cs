@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Toxic_Water : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Toxic_Water : MonoBehaviour
             player.transform.position = status.lastCheck;
             if(status.health <= 0)
             {
-                Destroy(player);
+                SceneManager.LoadScene(4);
             }
         }
     }
