@@ -6,6 +6,7 @@ public class EnemyReceiveDamage : MonoBehaviour
 {
     public Animator anim;
     public EnemyAttributesObject status;
+
     void Start()
     {
         status.health = status.maxHealth;

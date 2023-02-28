@@ -7,6 +7,12 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     public Rigidbody2D rig;
     public PlayerAttributesObject status;
+
+    public AudioSource audioStep;
+
+    public float timer = 0.5f;
+    private float stepsTimer;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -34,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
             status.right = false;
             if (!status.isSliding)
             {
+                if (status.isGrounded && !status.dashing)
+                {
+                    PlayerSteps();
+                }
                 transform.eulerAngles = new Vector3(0, 180, 0);
             }
         }
@@ -44,6 +54,10 @@ public class PlayerMovement : MonoBehaviour
             status.right = true;
             if (!status.isSliding)
             {
+                if (status.isGrounded && !status.dashing)
+                {
+                    PlayerSteps();
+                }
                 transform.eulerAngles = new Vector3(0, 0, 0);
             }
         }
@@ -72,4 +86,17 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    public void PlayerSteps()
+    {
+        stepsTimer += Time.deltaTime;
+
+        if(stepsTimer >= timer)
+        {
+            audioStep.Play();
+
+            stepsTimer = 0;
+        }
+    }
+
 }

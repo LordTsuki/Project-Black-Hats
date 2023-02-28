@@ -15,6 +15,9 @@ public class PlayerJump : MonoBehaviour
 
     public RaycastHit2D leftWallCheck;
     public RaycastHit2D rightWallCheck;
+
+    public AudioSource audioJump;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -35,6 +38,7 @@ public class PlayerJump : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && status.isGrounded && status.controller && !status.dashing && !status.isSliding)
         {
+            audioJump.Play();
             rig.velocity = (Vector2.up * status.jumpForce);
             status.doubleJump = true;
         }
