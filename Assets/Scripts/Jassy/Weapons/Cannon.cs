@@ -9,6 +9,8 @@ public class Cannon : MonoBehaviour
     public Transform cannonShotPoint;
     public PlayerAttributesObject status;
 
+    public AudioSource audioCannon;
+
     void Update()
     {
         if (status.shootActuallyCooldown <= 0)
@@ -17,6 +19,7 @@ public class Cannon : MonoBehaviour
             {
                 Instantiate(projectile, cannonShotPoint.position, transform.rotation);
                 status.shootActuallyCooldown = status.shootCooldown;
+                audioCannon.Play();
             }
         }
         else
