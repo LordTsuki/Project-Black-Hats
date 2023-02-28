@@ -90,7 +90,8 @@ public class MenuController : MonoBehaviour
 
     public void Credits()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(2);
     }
 
     public void Play()
