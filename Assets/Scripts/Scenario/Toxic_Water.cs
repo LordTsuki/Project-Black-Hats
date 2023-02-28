@@ -16,7 +16,8 @@ public class Toxic_Water : MonoBehaviour
             player.transform.position = status.lastCheck;
             if(status.health <= 0)
             {
-                SceneManager.LoadScene(4);
+                SceneManager.LoadSceneAsync(3);
+                SceneManager.LoadSceneAsync(4);
             }
         }
     }

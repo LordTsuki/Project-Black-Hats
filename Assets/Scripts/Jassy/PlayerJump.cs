@@ -44,6 +44,7 @@ public class PlayerJump : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && status.doubleJump && !status.isGrounded && status.controller && !status.dashing && !status.isSliding)
         {
+            audioJump.Play();
             rig.velocity = (Vector2.up * status.doubleJumpForce);
             status.doubleJump = false;
         }

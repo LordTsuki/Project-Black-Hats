@@ -28,7 +28,8 @@ public class ReceiveDamage : MonoBehaviour
         if (status.health <= 0)
         {
             //anim.SetBool("death", true);
-            SceneManager.LoadScene(4);
+            SceneManager.LoadSceneAsync(3);
+            SceneManager.LoadSceneAsync(4);
         }
     }
 }
