@@ -75,7 +75,7 @@ public class MenuPauseController : MonoBehaviour
 
     void SetOption(int optionIndex)
     {
-        arrow.transform.position = options[optionIndex].transform.position + new Vector3(-2.5f, 0f, 0f);
+        arrow.transform.position = options[optionIndex].transform.position + new Vector3(-420f, 0f, 0f);
         for (int i = 0; i < options.Length; i++)
         {
             if (i == optionIndex)
