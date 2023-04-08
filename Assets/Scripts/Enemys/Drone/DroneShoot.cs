@@ -82,14 +82,10 @@ public class DroneShoot : MonoBehaviour
                 collision.GetComponent<ReceiveDamage>().TakeDamage(damage);
                 DestroyProjectile();
             }
-            if (collision.CompareTag("Saber"))
+            else if (collision.CompareTag("Enemy"))
             {
-                lifeTime = 0.5f;
-                if (collision.CompareTag("Enemy"))
-                {
-                    collision.GetComponent<EnemyReceiveDamage>().TakeDamage(damage);
-                    DestroyProjectile();
-                }
+                collision.GetComponent<EnemyReceiveDamage>().TakeDamage(damage);
+                DestroyProjectile();
             }
             else if (collision.IsTouchingLayers(3))
             {

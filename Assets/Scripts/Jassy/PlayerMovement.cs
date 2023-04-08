@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rig;
     public PlayerAttributesObject status;
 
-    public AudioSource audioStep;
+    //public AudioSource audioStep;
 
     public float timer = 0.5f;
     private float stepsTimer;
@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(stepsTimer >= timer)
         {
-            audioStep.Play();
+            //audioStep.Play();
 
             stepsTimer = 0;
         }
