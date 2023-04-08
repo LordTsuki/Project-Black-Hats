@@ -16,6 +16,7 @@ public class DroneShoot : MonoBehaviour
     public float damage;
     public LayerMask whatisSolid;
     public float reflectionForce;
+    public bool reflected;
 
     [Header("Components")]
     public GameObject destroyEffect;
@@ -26,6 +27,7 @@ public class DroneShoot : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
         Invoke("DestroyProjectile", lifeTime);
+        reflected = false;
     }
     void Update()
     {
@@ -82,7 +84,7 @@ public class DroneShoot : MonoBehaviour
                 collision.GetComponent<ReceiveDamage>().TakeDamage(damage);
                 DestroyProjectile();
             }
-            else if (collision.CompareTag("Enemy"))
+            else if (collision.CompareTag("Enemy") && reflected)
             {
                 collision.GetComponent<EnemyReceiveDamage>().TakeDamage(damage);
                 DestroyProjectile();

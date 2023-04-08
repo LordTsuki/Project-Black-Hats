@@ -10,6 +10,7 @@ public class Saber : MonoBehaviour
     public CircleCollider2D trig;
     //public AudioSource audioAttack;
     public PlayerAttributesObject status;
+    public DroneShoot droneShoot;
 
     void Start()
     {
@@ -118,6 +119,7 @@ public class Saber : MonoBehaviour
             var droneShoot = collision.GetComponent<DroneShoot>();
             if (droneShoot != null)
             {
+                droneShoot.reflected = true;
                 droneShoot.ReflectProjectile(transform.position);
             }
         }
